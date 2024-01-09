@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Succesfull authorization page</title>
+</head>
+
+<body id="authorization-page">
+
+  <div> You are authorized, welcome!</div>
+  <script type="module">
+
+    function checkCred() {
+      if (!sessionStorage.getItem('user-creds')) {
+        window.location.href = 'log-in-page.html';
+      }
+    }
+
+    window.addEventListener('load', checkCred);
+
+  </script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

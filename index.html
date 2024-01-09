@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authorization Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__inner container">
+
+      <a class="header__logo" href="#">
+        <svg class="header__logo-svg" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" fill="#C4C4C4" />
+        </svg>
+      </a>
+
+      <div class="header__menu">
+        <select class="header__select" name="select" id="select">
+          <option value="">English (United States)</option>
+          <option value="">Spanish (Spain)</option>
+        </select>
+
+        <a class="header__log-in" type="button" href="log-in-page.html">
+          Log in
+        </a>
+      </div>
+
+      <div class="header__menu-mobile">
+        <select class="header__select" name="select" id="select">
+          <option value="">EN</option>
+          <option value="">ES</option>
+        </select>
+
+        <a class="header__log-in" type="button" href="log-in-page.html">
+          Log in
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="authorization__inner container">
+      <h1 class="authorization__page" style="display: none">Authorization page</h1>
+
+      <div class="authorization__content">
+        <div class="authorization__info">
+          <h2 class="authorization__name">
+            Explore the world to experience the beauty of nature
+          </h2>
+          <p class="authorization__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis maximus
+          </p>
+
+          <div class="authorization__links">
+            <a class="authorization__link" href="#">
+              <svg class="authorization__svg" width="28" height="28" viewBox="0 0 24 25" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.501 12.7332C22.501 11.8699 22.4296 11.2399 22.2748 10.5865H12.2153V14.4832H18.12C18.001 15.4515 17.3582 16.9099 15.9296 17.8898L15.9096 18.0203L19.0902 20.435L19.3106 20.4565C21.3343 18.6249 22.501 15.9298 22.501 12.7332Z"
+                  fill="#4285F4" />
+                <path
+                  d="M12.214 23C15.1068 23 17.5353 22.0666 19.3092 20.4567L15.9282 17.8899C15.0235 18.5083 13.8092 18.9399 12.214 18.9399C9.38069 18.9399 6.97596 17.1083 6.11874 14.5766L5.99309 14.5871L2.68583 17.0954L2.64258 17.2132C4.40446 20.6433 8.0235 23 12.214 23Z"
+                  fill="#34A853" />
+                <path
+                  d="M6.12046 14.5767C5.89428 13.9234 5.76337 13.2233 5.76337 12.5C5.76337 11.7767 5.89428 11.0767 6.10856 10.4234L6.10257 10.2842L2.75386 7.7356L2.64429 7.78667C1.91814 9.21002 1.50146 10.8084 1.50146 12.5C1.50146 14.1917 1.91814 15.79 2.64429 17.2133L6.12046 14.5767Z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12.2141 6.05997C14.2259 6.05997 15.583 6.91163 16.3569 7.62335L19.3807 4.73C17.5236 3.03834 15.1069 2 12.2141 2C8.02353 2 4.40447 4.35665 2.64258 7.78662L6.10686 10.4233C6.97598 7.89166 9.38073 6.05997 12.2141 6.05997Z"
+                  fill="#EB4335" />
+              </svg>
+              Continue with Google
+            </a>
+            <a class="authorization__link" href="#">
+              <svg class="authorization__svg" width="32" height="33" viewBox="0 0 32 33" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16.5" r="14" fill="#0C82EE" />
+                <path
+                  d="M21.2137 20.7816L21.8356 16.8301H17.9452V14.267C17.9452 13.1857 18.4877 12.1311 20.2302 12.1311H22V8.76699C22 8.76699 20.3945 8.5 18.8603 8.5C15.6548 8.5 13.5617 10.3929 13.5617 13.8184V16.8301H10V20.7816H13.5617V30.3345C14.2767 30.444 15.0082 30.5 15.7534 30.5C16.4986 30.5 17.2302 30.444 17.9452 30.3345V20.7816H21.2137Z"
+                  fill="white" />
+              </svg>
+              Continue with Facebook
+            </a>
+            <a class="authorization__link" href="#">
+              <svg class="authorization__svg" width="32" height="33" viewBox="0 0 32 33" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M30 16.5C30 24.228 23.735 30.5 16 30.5C8.265 30.5 2 24.228 2 16.5C2 8.765 8.265 2.5 16 2.5C23.735 2.5 30 8.765 30 16.5Z"
+                  fill="#333333" />
+                <path
+                  d="M22.5621 12.9574C22.4857 13.002 20.6671 13.9425 20.6671 16.0279C20.7528 18.4061 22.9621 19.2401 23 19.2401C22.9621 19.2847 22.6665 20.3763 21.7907 21.5205C21.0956 22.5062 20.3242 23.5 19.1528 23.5C18.0385 23.5 17.6385 22.8431 16.3528 22.8431C14.972 22.8431 14.5813 23.5 13.5242 23.5C12.3528 23.5 11.5242 22.453 10.7913 21.4766C9.8391 20.1986 9.02978 18.1931 9.00121 16.2675C8.98195 15.2471 9.19189 14.244 9.72481 13.3921C10.477 12.2026 11.8198 11.3952 13.2863 11.3686C14.4099 11.3333 15.4099 12.0875 16.0956 12.0875C16.7528 12.0875 17.9814 11.3686 19.3714 11.3686C19.9714 11.3692 21.5714 11.5376 22.5621 12.9574ZM16.0006 11.1649C15.8006 10.233 16.3528 9.30119 16.8671 8.70677C17.5242 7.98792 18.5621 7.5 19.4571 7.5C19.5143 8.43185 19.1522 9.34575 18.505 10.0114C17.9242 10.7302 16.9242 11.2714 16.0006 11.1649Z"
+                  fill="white" />
+              </svg>
+              Continue with Apple
+            </a>
+          </div>
+
+          <span class="authorization__span">
+            or
+          </span>
+
+          <a class="authorization__btn" href="sign-up-page.html">
+            Sign up with email
+          </a>
+
+          <p class="authorization__agreement">
+            By signing up, you agree to the Terms of Service and Privacy
+            Policy, including cookie use.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
