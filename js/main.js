@@ -12,6 +12,9 @@ const btnTextInner = document.querySelector('.form__btn-txt');
 const showSvg = document.querySelector('.form__show-svg');
 const hideSvg = document.querySelector('.form__hide-svg');
 
+const signUpBtn = document.querySelector('.form__button');
+const loader = document.querySelector('.form__loader');
+
 // toggle password visabillity
 function togglePasswordVisability() {
   if (passwordInput.getAttribute('type') == 'password') {
@@ -32,6 +35,7 @@ function togglePasswordVisability() {
 // user registration
 function registerUser(e) {
   e.preventDefault();
+  showLoader();
 
   createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
     .then((credentials) => {
@@ -40,31 +44,25 @@ function registerUser(e) {
       });
 
       sendEmailVerification(auth.currentUser)
-        .then(() => {
-          console.log('Email sent');
-        })
         .catch((error) => {
           console.error('Error occured:', error);
         });
 
-      console.log(credentials);
       sessionStorage.setItem('user-creds', JSON.stringify(credentials.user));
       window.location.href = 'authorization-page.html';
     })
     .catch((error) => {
       alert(error.message);
-      console.log(error.code);
-      console.log(error.message);
     });
-};
+}
 
 // user login
 function logInUser(e) {
   e.preventDefault();
+  showLoader();
 
   signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
     .then((credentials) => {
-      console.log(credentials);
       get(child(dbref, 'UsersAuthList/' + credentials.user.uid))
         .then((snapshot) => {
           if (snapshot.exists) {
@@ -78,11 +76,15 @@ function logInUser(e) {
     })
     .catch((error) => {
       alert(error.message);
-      console.log(error.code);
-      console.log(error.message);
       window.location.href = 'index.html';
     });
-};
+}
+
+// load hider
+function showLoader() {
+  signUpBtn.setAttribute('disabled', true);
+  loader.style.display = 'flex';
+}
 
 // event listeners
 try {
